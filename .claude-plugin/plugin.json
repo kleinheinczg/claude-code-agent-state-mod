@@ -1,0 +1,18 @@
+{
+  "name": "agent-state",
+  "version": "0.1.0",
+  "description": "Reports what a Claude Code session is really doing (idle / working / tool / permission, plus signals and token use) from inside the session, as a JSON snapshot and a JSONL event log",
+  "author": {
+    "name": "kleinheinczg"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/kleinheinczg/claude-code-agent-state-mod",
+  "userConfig": {
+    "outputDir": {
+      "type": "string",
+      "title": "Output folder",
+      "description": "Absolute folder for <session-id>.json and <session-id>.jsonl; empty = ~/.claude/agent-state",
+      "default": ""
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "agent-state",
+  "owner": {
+    "name": "kleinheinczg"
+  },
+  "description": "agent-state: what a Claude Code session is really doing, reported from inside",
+  "plugins": [
+    {
+      "name": "agent-state",
+      "source": "./"
+    }
+  ]
+}
