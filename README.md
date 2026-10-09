@@ -20,7 +20,8 @@ Answer `y` to add the marketplace, then pick a scope (user scope: every session 
 
 ## What it writes
 
-Per session, in `~/.claude/agent-state/` (change it with the `outputDir` option in `/config`):
+Per session, in `~/.claude/agent-state/` (change it with the `outputDir` option in `/config`; do not point it at a
+shared or synced folder such as iCloud Drive or Dropbox, or the data listed under Privacy leaves the machine):
 
 | file | content |
 |---|---|
@@ -79,6 +80,14 @@ Token use is summed per turn **and per model**: a turn that fell back to another
 Nothing you type leaves the session through this mod: the prompt box is reported only as *whether* text waits,
 the suggestion only as *whether* it shows, a slash command by name without its arguments, token use as numbers and the
 model name. The files are written only to your own disk; the mod makes no network call.
+
+What the files DO hold, so you can judge where they may go:
+
+- the session's full working folder path (`cwd`), which can carry your user name and a client or project folder name;
+- the names of the tools the session calls, MCP tools included (an MCP tool's name can tell what the machine is connected to);
+- the model names and token counts.
+
+The files are created with your default file permissions, so anyone who can read your home folder can read them too.
 
 ## Lessons measured while building it (useful for other mod authors)
 
